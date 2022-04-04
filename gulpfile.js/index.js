@@ -16,6 +16,13 @@ export const build = (cb) => {
   series(
     cleaning,
     parallel(html, css, js, img, font, favicon),
+  )(cb)
+}
+
+export const buildAndRun = (cb) => {
+  series(
+    cleaning,
+    parallel(html, css, js, img, font, favicon),
     parallel(server, watch)
   )(cb)
 }
