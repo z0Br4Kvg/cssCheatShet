@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "gulp build --gulpfile=./gulpfile.js/index.js",
-    "build-dev": "gulp build --productio --gulpfile=./gulpfile.js/index.jsn",
+    "build-dev": "gulp build --gulpfile=./gulpfile.js/index.js --production",
     "clean": "gulp clean --gulpfile=./gulpfile.js/index.js"
   },
   "browserslist": [
