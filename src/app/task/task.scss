@@ -1,0 +1,15 @@
+@import '../variables';
+
+.task {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  &__side {
+    width: 50%;
+  }
+
+  &__property-title {
+    font-size: 1.15rem;
+    @include contentCenter();
+  }
+}

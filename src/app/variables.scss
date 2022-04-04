@@ -1,0 +1,10 @@
+$color-bg: #f4f7fa;
+$color-font: rgb(102, 102, 102);
+$color-border:  #e4e6f6;
+
+@mixin contentCenter() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

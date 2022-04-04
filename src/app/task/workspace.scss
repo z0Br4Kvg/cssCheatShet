@@ -1,0 +1,69 @@
+@import '../variables';
+$color-bg-item: #f8f6f6;
+$color-conflict: rgb(252, 180, 29);
+$color-active: #80ccff;
+
+.task__workspace {
+  width: 100%;
+
+  background: #fff;
+  border: 1px solid $color-border;
+
+  &-parent {
+    height: 350px;
+    background: #e4e6f6;
+  }
+
+  &-child {
+    @include contentCenter();
+    border: 1px solid darken(rgb(248, 246, 246), 5%);
+    background: rgb(248, 246, 246);
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: row;
+  }
+  &-menu-items-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-menu-item,
+  &-menu-item--active {
+    width: 40px;
+    height: 30px;
+    background: $color-bg-item;
+    border: 2px solid $color-bg-item;
+    cursor: pointer;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    @include contentCenter()
+  }
+  &-menu-item--active {
+    border: 2px solid $color-active;
+  }
+
+  &-menu-buttons {
+    min-width: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      cursor: pointer;
+      width: 39px;
+      height: 28px;
+      background: $color-bg-item;
+      border: 2px solid darken($color-active, 5%);
+      margin-right: 2px;
+      border-radius: 5px;
+      @include contentCenter();
+    }
+  }
+}
