@@ -1,0 +1,23 @@
+@import './variables';
+
+.property__settings-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.property__settings-argument {
+  display: flex;
+  flex-direction: row;
+}
+.property__settings {
+  display: flex;
+  flex-direction: row;
+}
+.property__settings-values {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.property__settings-arg-count {
+
+}

@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 body {
-  background: #e6f5ff;
+  background: white;
+  font-size: 12px;
 }
 
-@import "app/app";
+@import "/style/**/*.scss";

@@ -1,0 +1,126 @@
+@import './variables';
+
+.property-add {
+  background: $color-background;
+  border: 1px solid darken($color-background, 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__list--hidden,
+  &__list--visible {
+    padding: 10px;
+    position: absolute;
+    width: 950px;
+    height: 500px;
+    background: $color-background;
+    border: 2px solid $color-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__list--hidden {
+    visibility: hidden;
+  }
+
+  &__list--visible {
+    visibility: visible;
+    top: 100px;
+  }
+
+  &__list-item,
+  &__list-item--active {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 125px;
+    border: 2px solid darken($color-background, 5%);
+    margin-bottom: 1px;
+  }
+
+  &__list-item--active {
+    border: 2px solid $color-blue;
+  }
+
+  &__presets,
+  &__properties{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    border: 1px solid darken($color-background, 5%);
+    flex-direction: row;
+  }
+
+  &__presets-inner-wrap,
+  &__properties-inner-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__properties-inner-wrap:nth-last-child(1) {
+    width: min-content;
+  }
+
+  &__presets-items,
+  &__properties-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__presets-item,
+  &__properties-item,
+  &__properties-item--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 25px;
+    width: 125px;
+    border: 2px solid darken($color-background, 5%);
+    margin-right: 5px;
+    margin-bottom: 1px;
+    border-radius: 5px;
+  }
+  &__properties-item,
+  &__properties-item--active {
+    width: max-content;
+    padding: 2px 5px;
+  }
+
+  &__properties-item--active {
+    border: 2px solid $color-blue;
+  }
+
+  &__presets-title,
+  &__properties-title {
+    width: 190px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 1.2em;
+  }
+
+  &__properties-button {
+    padding: 5px 10px 5px 10px;
+    border: 2px solid $color-blue;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    width: max-content;
+  }
+
+}

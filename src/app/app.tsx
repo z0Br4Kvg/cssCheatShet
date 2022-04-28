@@ -1,8 +1,10 @@
 import * as React from "react";
-import {PageManager} from "./pages/pageManager";
+import {Test} from "./test";
 
 export const App = () => {
   return(<>
-    <PageManager />
+
+      <Test />
   </>)
 }
+

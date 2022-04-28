@@ -1,0 +1,13 @@
+@import './variables';
+
+.task {
+  display: flex;
+  flex-direction: row;
+  max-width: 1160px;
+}
+
+.task__menu {
+  min-width: 200px;
+  background: $color-background;
+  border: 1px solid darken($color-background, 5%);
+}

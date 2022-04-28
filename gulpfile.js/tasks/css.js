@@ -10,6 +10,7 @@ import gulpSass from "gulp-sass";
 import dartSass from "sass";
 
 import {config} from "../config.js";
+import {browserSync} from "./server.js";
 
 const {src, dest} = gulp
 const sass = gulpSass(dartSass)
@@ -27,4 +28,5 @@ export const css = () => {
     .pipe( csso() )
     .pipe( rename(config.plugin.rename.css.min()) )
     .pipe( dest(config.path.css.dest, {sourcemaps: config.isDev}) )
+    .pipe( browserSync.stream() )
 }

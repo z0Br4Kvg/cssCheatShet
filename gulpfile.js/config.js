@@ -47,8 +47,8 @@ config.path = {
     dest: config.dest + '/font',
   },
   favicon: {
-    src: config.src + `/img/favicon/favicon.svg`,
-    watch: config.src + `/img/favicon/favicon.svg`,
+    src: config.src + `/img/favicon/*.svg`,
+    watch: config.src + `/img/favicon/*.svg`,
     dest: config.dest + `/img/favicon/`,
   }
 }
@@ -86,6 +86,11 @@ config.plugin =  {
     output: {
       filename: "bundle.js",
       path: path.resolve('', config.dest)
+    },
+    optimization: {
+      splitChunks: {
+        maxSize: 200,
+      },
     },
     module: {
       rules: [
